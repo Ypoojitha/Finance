@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<head>
+	<title>Google Sign In</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<link href="css/animate.css" rel="stylesheet"/>
+	<link href="css/waypoints.css" rel="stylesheet"/>
+	<script src="js/jquery.waypoints.min.js" type="text/javascript"></script>
+	<script src="js/waypoints.js" type="text/javascript"></script>
+</head>
+<body>
+  <section class="intro">
+    <div class="content">
+        <form class="modal-content animate" action="/action_page.php" style="padding-top:10px;padding-bottom:10px;width:35%;">
+          <p class="item1" style="color:black;"><b>Login to out site</b><br>
+          <p> Enter Username and password to log on</p>
+          <div class="imgcontainer">
+            <img src="C:/Users/kranthi/Desktop/login form/images/img_avatar2.png" alt="Avatar" class="avatar">
+          </div>
+
+          <div class="container">
+            <label for="uname"><b>Username</b></label><br>
+            <input type="text" placeholder="Enter Username" name="uname" required><br>
+
+            <label for="psw"><b>Password</b></label><br>
+            <input type="password" placeholder="Enter Password" id="myInput1"><br>
+            <input type="checkbox" onclick="myFunction('myInput1')">Show Password<br>
+
+            <button type="submit" class="signupbtn">Login</button><br>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+          </div>
+
+          <div class="container" style="background-color:#f1f1f1;width:auto;">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+          </div>
+        </form>
+        <p style="color:white;"><b>_Or login with:</b></p>
+          <a href="https://www.facebook.com/" class="fa fa-facebook" style="font-size: 15px;width:10%;"> Facebook</a>
+          <a href="https://twitter.com/login?lang=en" class="fa fa-twitter" style="font-size: 15px;width:10%;"> Twitter</a>
+          <a href="https://plus.google.com/discover" class="fa fa-google" style="font-size: 15px;width:15%;"> Google Plus</a>
+      </div>
+    </section><br>
+
+
+      <canvas id="DemoCanvas" width="100" height="400" style="float:left;padding-top:15%;"></canvas>
+
+    <section class="intro1">
+      <div class="content1">
+        <form class="modal-content animate1" action="/action_page.php" style="padding-top:10px;padding-bottom:10px;width:35%;float:right;">
+          <p class="item2" style="color:black;"><b>Sign up now</b><br>
+          <p> Fill in the form below to get instant access</p>
+        <div class="container">
+          <label for="uname"><b>Firstname</b></label><br>
+          <input type="text" placeholder="First name" name="uname" required><br>
+
+          <label for="lname"><b>Last name</b></label><br>
+          <input type="text" placeholder="Last name" id="myInput1"><br>
+
+          <label for="email"><b>Email</b></label><br>
+          <input type="text" placeholder="Email" id="myInput1"><br>
+
+          <label for="subject">Subject</label><br>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="width:30%;height:100px"></textarea><br>
+
+          <button type="submit" class="signupbtn">Sign me up!!!</button>
+
+        </div>
+
+    <script>
+      var canvas = document.getElementById('DemoCanvas');
+      if (canvas.getContext)
+      {
+        var context = canvas.getContext("2d");
+        context.beginPath();
+        context.moveTo(100, 10);
+        context.lineTo(100, 200);
+        context.lineWidth = 1;
+        // set line color
+        context.strokeStyle = 'white';
+        context.stroke();
+      }
+
+
+
+    function myFunction(id) {
+      var x = document.getElementById(id);
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    }
+
+    </script>
+
+  </body>
+</html>
